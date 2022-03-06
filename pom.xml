@@ -20,6 +20,7 @@
         <module>hystrix</module>
         <module>nativeconfigserver</module>
         <module>nativeconfigclient</module>
+        <module>configserver</module>
     </modules>
 
     <!-- 统一管理jar包版本 -->
