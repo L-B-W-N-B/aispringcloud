@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: configclient
+  profiles:
+    active: dev
+    # 此处注意  本地配置中心配置文件的名字 configclient-dev 要和此处对应
+    # 通过 spring.application.name 结合spring.profiles.active 拼接目标配置文件名
+    # configclient-dev.yml 去Config Server 中查找该文件
+  cloud:
+    config:
+      # cloud.config.uri 本地config server 访问路径
+      # cloud.config.fail-fast 设置客户端优先判断 config server 获取是否正常。
+      uri: http://localhost:8762
+      # 从 8762 端口去找
+      fail-fast: true
